@@ -1,0 +1,18 @@
+span{
+    color: #08c;
+}
+h3{
+    color: rgb(61, 61, 230);
+}
+.my-frame {
+    width: 700px;
+    height: 300px;
+    border: 2px solid rgb(164, 160, 160);
+    padding: 10px;
+    margin: 20px;
+    
+  }
+.content{
+    word-spacing: 1px;
+    margin: 20px 0;
+}

@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    margin-left: 310px;
+    margin-top: 15px;
+}
+
+.body-2 {
+    margin-left: 320px;
+}
+
+.site-footer__title {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+.header-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.subscribe-button {
+    margin-top: 18px;
+    margin-left: 21%;
+}
+
+.paragraph {
+    margin-left: 320px;
+    margin-right: 310px;
+}
+
+.text-italic {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.uppercaseText {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: 10px;
+}
+
+.copyright-text {
+    margin-top: 30px;
+}
+
+.text-dd {
+    margin-left: 40px;
+}
