@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Highlighter</title>
+  <style>
+    .highlight {
+      font-weight: bold;
+      color: red; 
+    }
+  </style>
+</head>
+<body>
+
+    <p id="textToHighlight">
+    University of <b>Information Teachnology</b>
+    </p>
+    <a href="#" id="highlightLink">Hover to Highlight</a>
+    <script>
+    document.getElementById('highlightLink').addEventListener('mouseover', function () {
+        var textElement = document.getElementById('textToHighlight');
+        var boldElements = textElement.getElementsByTagName('b');
+        for (var i = 0; i < boldElements.length; i++) {
+        boldElements[i].classList.add('highlight');
+        }
+    });
+    document.getElementById('highlightLink').addEventListener('mouseout', function () {
+        var highlightedElements = document.getElementsByClassName('highlight');
+        while (highlightedElements.length > 0) {
+        highlightedElements[0].classList.remove('highlight');
+        }
+    });
+    </script>
+
+</body>
+</html>

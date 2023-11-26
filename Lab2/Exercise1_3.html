@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1.3</title>
+    <script>
+        function parseCookieHeader(cookieHeader) {
+            var cookies = {};
+            var cookiePairs = cookieHeader.split(';');
+
+            for (var i = 0; i < cookiePairs.length; i++) {
+                var cookiePair = cookiePairs[i].trim();
+                var separatorIndex = cookiePair.indexOf('=');
+
+                if (separatorIndex === -1) {
+                    continue;
+                }
+
+                var name = cookiePair.substring(0, separatorIndex);
+                var value = cookiePair.substring(separatorIndex + 1);
+                cookies[name] = value;
+            }
+
+            return cookies;
+        }
+
+        function handleFormSubmit() {
+            var cookieHeaderInput = document.getElementById('cookieHeader');
+            var resultContainer = document.getElementById('result');
+
+            var cookieHeaderString = cookieHeaderInput.value;
+            var cookies = parseCookieHeader(cookieHeaderString);
+
+            resultContainer.innerHTML = '<pre>' + JSON.stringify(cookies, null, 2) + '</pre>';
+        }
+    </script>
+</head>
+<body>
+    
+    <form onsubmit="event.preventDefault(); handleFormSubmit();">
+        <label for="cookieHeader">Enter Cookie Header:</label>
+        <input type="text" id="cookieHeader" required>
+        <button type="submit">Parse</button>
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>

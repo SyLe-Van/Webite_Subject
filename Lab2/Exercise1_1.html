@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+        function displayDateTime() {
+        
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        
+        const now = new Date();
+        const dayOfWeek = days[now.getDay()]; 
+
+        
+        let hours = now.getHours();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12;
+
+        
+        const formattedTime = `${hours} ${ampm} : ${String(now.getMinutes()).padStart(2, '0')} : ${String(now.getSeconds()).padStart(2, '0')}`;
+
+        document.getElementById('day').textContent = `Today is: ${dayOfWeek}`;
+        document.getElementById('time').textContent = `Current time is: ${formattedTime}`;
+        }
+
+        window.onload = function() {
+        displayDateTime();
+        };
+  </script>
+</head>
+<body>
+  <p id="day"></p>
+  <p id="time"></p>
+</body>
+</html>

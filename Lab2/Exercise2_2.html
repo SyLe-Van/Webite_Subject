@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2_2</title>
+</head>
+<body>
+
+    <script>
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/submit-form';
+    
+        const nameInput = document.createElement('input');
+        nameInput.type = 'text';
+        nameInput.name = 'name';
+        nameInput.placeholder = 'Enter your name';
+        form.appendChild(nameInput);
+    
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+        form.appendChild(submitButton);
+    
+        document.body.appendChild(form);
+    
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            getSubmitButtonValue(submitButton); 
+        });
+        function getSubmitButtonValue(submitButton) {
+            alert('Submit button value: ' + submitButton.value);
+        }
+    </script>
+    
+
+</body>
+</html>
