@@ -6,7 +6,6 @@ import Exercise1_3 from "./components/Exercises1.3/Exercise1_3";
 import Exercise1_4 from "./components/Exercises1.4/Exercise1_4";
 import Exercise1_5 from "./components/Exercises1.5/Exercise1_5";
 import Exercise1_6 from "./components/Exercises1.6/Exercise1_6";
-import Exercise1_7 from "./components/Exercises1.7/Exercise1_7";
 
 function App() {
   return (
@@ -26,8 +25,6 @@ function App() {
       <Exercise1_5 />
       <hr />
       <Exercise1_6 />
-      <hr />
-      <Exercise1_7 />
     </>
   );
 }
